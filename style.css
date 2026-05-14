@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 
 :root {
-    --bgColor: #000000;
-    --bgColor2: #252525;
-    --accentColor: #ffffff;
+    --bgColor: hsl(0, 0%, 21%);
+    --bgColor2: #303030;
+    --accentColor: #fde400;
     --font: 'Karla', sans-serif;
     --delay: .3s;
 }
@@ -30,7 +30,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: #111;
+    background: #000000;
 }
 
 /* =========================
@@ -179,6 +179,8 @@ body {
         transform: translateY(-2000px);
     }
 }
+
+
 
 
 /*-------------------------popup------------------------*/
@@ -846,3 +848,209 @@ body {
     494px 1957px #fff, 1296px 431px #fff, 175px 1507px #fff, 831px 121px #fff,
     498px 1947px #fff, 617px 880px #fff, 240px 403px #fff;
 }
+/* =========================
+   DOWNLOAD APK SECTION
+========================= */
+
+.download-section {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+.download-title {
+  color: gold;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 0 10px gold,
+    0 0 20px orange;
+}
+
+/* Grid */
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  width: 90%;
+  max-width: 420px;
+  margin: auto;
+}
+
+/* Card */
+.download-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px 12px;
+
+  border-radius: 20px;
+
+  text-decoration: none;
+  color: white;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 20px rgba(255,215,0,0.15),
+    0 0 40px rgba(255,0,0,0.08);
+
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.download-card:hover {
+  transform: translateY(-5px) scale(1.04);
+
+  box-shadow:
+    0 0 30px rgba(255,215,0,0.35),
+    0 0 60px rgba(255,0,0,0.2);
+}
+
+/* Shine Effect */
+.download-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -120%;
+
+  width: 80%;
+  height: 100%;
+
+  background: rgba(255,255,255,0.18);
+
+  transform: skewX(-25deg);
+  transition: 0.7s;
+}
+
+.download-card:hover::before {
+  left: 140%;
+}
+
+/* Image */
+.download-card img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+
+  margin-bottom: 12px;
+
+  filter: drop-shadow(0 0 10px rgba(255,215,0,0.35));
+}
+
+/* Text */
+.download-card span {
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.3);
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+
+  .download-grid {
+    gap: 15px;
+  }
+
+  .download-card {
+    padding: 15px 10px;
+  }
+
+  .download-card img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .download-card span {
+    font-size: 14px;
+  }
+}
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copyright {
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  font-size: 13px;
+  letter-spacing: 1px;
+
+  color: rgba(255,255,255,0.7);
+
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.2);
+
+  position: relative;
+  z-index: 5;
+}
+
+/* =========================
+   COPYRIGHT FIX CENTER
+========================= */
+
+.copyright {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+
+  text-align: center;
+
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+  font-size: 13px;
+  letter-spacing: 1px;
+
+  color: rgba(255,255,255,0.7);
+
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.2);
+
+  z-index: 5;
+}
+
+/* Glow Line */
+.copyright::before {
+  content: "";
+
+  display: block;
+
+  width: 100px;
+  height: 2px;
+
+  margin: 0 auto 12px auto;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    gold,
+    transparent
+  );
+
+  box-shadow: 0 0 10px gold;
+}
+
