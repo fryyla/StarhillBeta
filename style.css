@@ -3,7 +3,7 @@
 :root {
     --bgColor: hsl(0, 0%, 21%);
     --bgColor2: #303030;
-    --accentColor: #fde400;
+    --accentColor: #e6a800;
     --font: 'Karla', sans-serif;
     --delay: .3s;
 }
@@ -116,18 +116,118 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-@media (hover: hover) {
-    .link:hover {
-        background-color: var(--accentColor);
-        color: var(--bgColor);
+
+/* BUTTON */
+.link{
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    padding:18px 22px;
+
+    text-decoration:none;
+    color:#fff;
+
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:1px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:2px solid rgba(255,230,0,0.35);
+
+    backdrop-filter:blur(12px);
+
+    overflow:hidden;
+
+    transition:0.35s ease;
+
+    box-shadow:
+        0 0 10px rgba(255,230,0,0.25),
+        inset 0 0 15px rgba(255,230,0,0.05);
+}
+
+
+/* ICON */
+.link i{
+    color:#e6a800;
+    font-size:22px;
+
+    text-shadow:
+        0 0 8px #e6a800,
+        0 0 18px #e6a800;
+}
+
+
+/* SHINE EFFECT */
+.link::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-120%;
+
+    width:70%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.28),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:0.7s;
+}
+
+/* HOVER SHINE */
+.link:hover::before{
+    left:130%;
+}
+
+/* HOVER EFFECT */
+.link:hover{
+    transform:translateY(-5px) scale(1.02);
+
+    border-color:#e6a800;
+
+    color:#fff;
+
+    box-shadow:
+        0 0 12px #e6a800,
+        0 0 30px rgba(255,230,0,0.7),
+        inset 0 0 20px rgba(255,230,0,0.15);
+}
+
+
+/* ACTIVE CLICK */
+.link:active{
+    transform:scale(0.97);
+}
+
+/* RESPONSIVE */
+@media(max-width:500px){
+
+    #links{
+        padding:18px;
+    }
+
+    .link{
+        font-size:14px;
+        padding:16px;
+        border-radius:15px;
+    }
+
+    .link i{
+        font-size:20px;
     }
 }
-
-.link:active {
-    background-color: var(--accentColor);
-    color: var(--bgColor);
-}
-
 #hashtag {
     position: relative;
     padding-bottom: 20px;
