@@ -178,6 +178,59 @@ body {
         rgba(255,255,255,0.28),
         transparent
     );
+    .link{
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+    /* dst */
+}
+
+
+/* TEMPEL DI SINI */
+.link{
+    animation:lightningIn 0.8s ease forwards;
+
+    opacity:0;
+    transform:scale(0.7) translateY(30px);
+}
+
+.link:nth-child(1){ animation-delay:0.1s; }
+.link:nth-child(2){ animation-delay:0.2s; }
+.link:nth-child(3){ animation-delay:0.3s; }
+.link:nth-child(4){ animation-delay:0.4s; }
+.link:nth-child(5){ animation-delay:0.5s; }
+.link:nth-child(6){ animation-delay:0.6s; }
+
+@keyframes lightningIn{
+    0%{
+        opacity:0;
+        transform:scale(0.6) translateY(40px);
+        filter:brightness(4) blur(8px);
+
+        box-shadow:
+            0 0 80px #fff,
+            0 0 120px #ffd000;
+    }
+
+    15%{
+        opacity:1;
+        filter:brightness(8) blur(2px);
+        transform:scale(1.08);
+
+        box-shadow:
+            0 0 100px #fff,
+            0 0 150px #ffd000;
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1) translateY(0);
+        filter:brightness(1) blur(0);
+    }
+}
 
     transform:skewX(-25deg);
 
