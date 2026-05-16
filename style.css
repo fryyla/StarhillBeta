@@ -229,7 +229,7 @@ body {
         filter:brightness(4) blur(8px);
 
         box-shadow:
-            0 0 80px #fff,
+            0 0 80px #e6a800,
             0 0 120px #ffd000;
     }
 
@@ -239,7 +239,7 @@ body {
         transform:scale(1.08);
 
         box-shadow:
-            0 0 100px #fff,
+            0 0 100px #e6a800,
             0 0 150px #ffd000;
     }
 
@@ -261,7 +261,7 @@ body {
 
     border-color:#e6a800;
 
-    color:#fff;
+    color:#e6a800;
 
     box-shadow:
         0 0 12px #e6a800,
