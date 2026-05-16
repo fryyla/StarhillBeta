@@ -119,30 +119,31 @@ body {
 
 /* BUTTON */
 #links{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+    display:grid;
+    grid-template-columns:1fr 1fr;
     gap:15px;
+
+    width:100%;
+    max-width:420px;
+    margin:auto;
 }
 
 .link{
-    width:180px; /* ukuran button */
-
     position:relative;
 
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:12px;
+    gap:10px;
 
-    padding:18px 22px;
+    padding:16px 10px;
 
     text-decoration:none;
     color:#fff;
 
-    font-size:16px;
+    font-size:14px;
     font-weight:600;
-    letter-spacing:1px;
+    text-align:center;
 
     border-radius:18px;
 
@@ -160,17 +161,6 @@ body {
         0 0 10px rgba(255,230,0,0.25),
         inset 0 0 15px rgba(255,230,0,0.05);
 }
-
-/* ICON */
-.link i{
-    color:#e6a800;
-    font-size:22px;
-
-    text-shadow:
-        0 0 8px #e6a800,
-        0 0 18px #e6a800;
-}
-
 
 /* SHINE EFFECT */
 .link::before{
