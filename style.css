@@ -59,16 +59,61 @@ body {
     width: 300px;
     max-width: 90%;
     border-radius: 10px;
+
+    animation:bannerIn 2.5s ease forwards;
+
+    opacity:0;
+
+    transform:
+        translateY(-80px)
+        scale(0.6);
+
+    filter:
+        brightness(4)
+        blur(10px);
+
+    box-shadow:
+        0 0 10px #ffd000,
+        0 0 10px #ffea00;
 }
 
-.below-logo {
-    margin-top: 20px;
-    text-align: center;
-}
+@keyframes bannerIn{
 
-.below-logo img {
-    width: 300px; /* ubah sesuai kebutuhan */
-    border-radius: 10px;
+    0%{
+        opacity:0;
+
+        transform:
+            translateY(-120px)
+            scale(0.4);
+
+        filter:
+            brightness(8)
+            blur(20px);
+    }
+
+    20%{
+        opacity:1;
+
+        transform:
+            translateY(20px)
+            scale(1.08);
+
+        filter:
+            brightness(10)
+            blur(2px);
+    }
+
+    100%{
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            brightness(1)
+            blur(0);
+    }
 }
 
 #profilePicture, #profilePicture img {
@@ -1217,4 +1262,3 @@ body {
 
   box-shadow: 0 0 10px gold;
 }
-
