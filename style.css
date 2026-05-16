@@ -74,8 +74,8 @@ body{
         blur(10px);
 
     box-shadow:
-        0 0 10px #ffd000,
-        0 0 10px #ffea00;
+        0 0 3px #ffd000,
+        0 0 3px #ffea00;
 }
 
 @keyframes bannerIn{
