@@ -23,6 +23,7 @@ body {
     position: relative;
 }
 
+
 /* =========================
    BODY
 ========================= */
@@ -32,6 +33,7 @@ body {
     text-align: center;
     background: #000000;
 }
+
 
 /* =========================
    PROFILE PICTURE
@@ -162,6 +164,17 @@ body {
         inset 0 0 15px rgba(255,230,0,0.05);
 }
 
+/* ICON */
+.link i{
+    color:#e6a800;
+    font-size:22px;
+
+    text-shadow:
+        0 0 8px #e6a800,
+        0 0 18px #e6a800;
+}
+
+
 /* SHINE EFFECT */
 .link::before{
     content:'';
@@ -178,7 +191,12 @@ body {
         rgba(255,255,255,0.28),
         transparent
     );
-    .link{
+
+    transform:skewX(-25deg);
+
+    transition:0.7s;
+}
+.link{
     position:relative;
 
     display:flex;
@@ -230,11 +248,6 @@ body {
         transform:scale(1) translateY(0);
         filter:brightness(1) blur(0);
     }
-}
-
-    transform:skewX(-25deg);
-
-    transition:0.7s;
 }
 
 /* HOVER SHINE */
